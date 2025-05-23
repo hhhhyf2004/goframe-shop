@@ -18,3 +18,23 @@
 2025-05-23T18:15:30.563+08:00 [DEBU] {0db5d7ea7d204218e37dd83e9be359b5} [  7 ms] [default] [shop] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
 2025-05-23T18:15:30.564+08:00 [DEBU] {0db5d7ea7d204218e37dd83e9be359b5} [  1 ms] [default] [shop] [rows:2  ] SELECT `pic_url`,`link`,`sort` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 0,2
 2025-05-23T18:15:44.502+08:00 [DEBU] {f89ffd2981204218e47dd83eccd33af4} [  2 ms] [default] [shop] [rows:1  ] DELETE FROM `rotation_info` WHERE `id`=2
+2025-05-23T20:00:56.859+08:00 [DEBU] {e2f7a9df3e264218919d1c3c48ef42ce} [  2 ms] [default] [shop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2025-05-23T20:00:56.860+08:00 [DEBU] {e2f7a9df3e264218919d1c3c48ef42ce} [  1 ms] [default] [shop] [rows:1  ] SELECT COUNT(1) FROM `admin_info`
+2025-05-23T20:00:56.861+08:00 [DEBU] {e2f7a9df3e264218919d1c3c48ef42ce} [  1 ms] [default] [shop] [rows:23 ] SHOW TABLES
+2025-05-23T20:00:56.862+08:00 [DEBU] {e2f7a9df3e264218919d1c3c48ef42ce} [  1 ms] [default] [shop] [rows:4  ] SELECT `id`,`name`,`role_ids`,`is_admin`,`created_at`,`updated_at` FROM `admin_info` LIMIT 0,10
+2025-05-23T20:01:55.023+08:00 [DEBU] {13d26b6a4c264218939d1c3c4a504c76} [  5 ms] [default] [shop] [rows:1  ] UPDATE `admin_info` SET `id`=16,`role_ids`='2',`updated_at`='2025-05-23 20:01:55' WHERE `id`=16
+2025-05-23T20:03:29.177+08:00 [DEBU] {2ea487566226421887e244374f427a9c} [  3 ms] [default] [shop] [rows:23 ] SHOW TABLES
+2025-05-23T20:03:29.180+08:00 [DEBU] {2ea487566226421887e244374f427a9c} [  3 ms] [default] [shop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2025-05-23T20:03:29.182+08:00 [DEBU] {2ea487566226421887e244374f427a9c} [  2 ms] [default] [shop] [rows:1  ] UPDATE `admin_info` SET `role_ids`='1',`updated_at`='2025-05-23 20:03:29' WHERE `id`=16
+2025-05-23T20:04:22.251+08:00 [DEBU] {a36a0eb26e26421888e244376b154eaa} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `admin_info`(`id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin`) VALUES(0,'','7fb838afb433c4d726df2748571963a3','','2025-05-23 20:04:22','2025-05-23 20:04:22','F1CdCSOlTn',0) 
+2025-05-23T20:05:29.677+08:00 [DEBU] {1f3df8647e26421874f3697ce055d8eb} [  2 ms] [default] [shop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2025-05-23T20:05:29.679+08:00 [DEBU] {1f3df8647e26421874f3697ce055d8eb} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `admin_info`(`password`,`created_at`,`updated_at`,`user_salt`) VALUES('2a933c5ac3b49e1b3a7abf125430ccfe','2025-05-23 20:05:29','2025-05-23 20:05:29','2DtEzEsf24') 
+2025-05-23T20:07:51.716+08:00 [DEBU] {e7640a779f264218dc03c9013790cfa1} [  4 ms] [default] [shop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2025-05-23T20:07:51.718+08:00 [ERRO] {e7640a779f264218dc03c9013790cfa1} [  2 ms] [default] [shop] [rows:0  ] INSERT INTO `admin_info`(`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`) VALUES('hh','65c3df2050dfd902cb7d9703963a8dfb','2','2025-05-23 20:07:51','2025-05-23 20:07:51','6WC4bxb1Vh') 
+Error: Error 1062 (23000): Duplicate entry 'hh' for key 'name_unique' 
+Stack:
+1.  goframe-shop/internal/controller/backend/admin.(*ControllerV1).Create
+    /home/hyf/projects/goframe-shop/internal/controller/backend/admin/admin_v1_create.go:26
+
+2025-05-23T20:08:17.760+08:00 [DEBU] {208a7587a5264218dd03c901c4f5d2c8} [  3 ms] [default] [shop] [rows:1  ] INSERT INTO `admin_info`(`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`) VALUES('hh','92475d0599b131f8e77fdaacf1a5d4ab','2','2025-05-23 20:08:17','2025-05-23 20:08:17','eudzDdagF4') 
+2025-05-23T20:09:42.271+08:00 [DEBU] {5952b834b9264218df03c901fcd3a157} [  3 ms] [default] [shop] [rows:1  ] DELETE FROM `admin_info` WHERE `id`=20

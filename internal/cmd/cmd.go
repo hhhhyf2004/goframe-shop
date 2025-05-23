@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"context"
+	"goframe-shop/internal/controller/backend/admin"
 	"goframe-shop/internal/controller/backend/rotation"
 
 	"github.com/gogf/gf/v2/frame/g"
@@ -20,6 +21,7 @@ var (
 				group.Middleware(ghttp.MiddlewareHandlerResponse)
 				group.Bind(
 					rotation.NewV1(),
+					admin.NewV1(),
 				)
 			})
 			s.Run()

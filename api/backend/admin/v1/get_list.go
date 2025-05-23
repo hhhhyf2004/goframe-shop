@@ -7,7 +7,7 @@ import (
 )
 
 type GetListReq struct {
-	g.Meta `path:"/rotation/list" method:"get" tags:"轮播图" summary:"列表"`
+	g.Meta `path:"/admin/list" method:"get" tags:"管理员" summary:"列表"`
 	backend.CommonPaginationReq
 }
 type GetListRes struct {
