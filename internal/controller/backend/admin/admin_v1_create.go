@@ -13,16 +13,16 @@ import (
 
 func (c *ControllerV1) Create(ctx context.Context, req *v1.CreateReq) (res *v1.CreateRes, err error) {
 	admin := entity.AdminInfo{
-		Name: req.Name,
+		Name:    req.Name,
 		RoleIds: req.RoleIds,
 		IsAdmin: req.IsAdmin,
 	}
 	admin.UserSalt = grand.S(10)
-	admin.Password = utility.EncryptPassword(admin.Password, admin.UserSalt)
+	admin.Password = utility.EncryptPassword(req.Password, admin.UserSalt)
 	id, err := dao.AdminInfo.
 		Ctx(ctx).
 		Data(admin).
 		OmitEmpty().
 		InsertAndGetId()
-	return &v1.CreateRes{AdminId: int(id)}, err 
+	return &v1.CreateRes{AdminId: int(id)}, err
 }
