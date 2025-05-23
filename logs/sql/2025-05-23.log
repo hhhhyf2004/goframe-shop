@@ -1,0 +1,20 @@
+2025-05-23T18:02:42.782+08:00 [DEBU] {50e19927cb1f4218e2929f1ab6688315} [  5 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2025-05-23T18:02:42.784+08:00 [DEBU] {50e19927cb1f4218e2929f1ab6688315} [  2 ms] [default] [shop] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2025-05-23T18:09:02.177+08:00 [DEBU] {36c4657d232042183fb8e963e193a2c7} [  4 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2025-05-23T18:09:02.178+08:00 [DEBU] {36c4657d232042183fb8e963e193a2c7} [  0 ms] [default] [shop] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2025-05-23T18:09:02.179+08:00 [DEBU] {36c4657d232042183fb8e963e193a2c7} [  1 ms] [default] [shop] [rows:23 ] SHOW TABLES
+2025-05-23T18:09:02.180+08:00 [DEBU] {36c4657d232042183fb8e963e193a2c7} [  1 ms] [default] [shop] [rows:1  ] SELECT `pic_url`,`link`,`sort` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 0,2
+2025-05-23T18:11:28.911+08:00 [DEBU] {9fd86ea745204218a7f3ff180d4dcbec} [  3 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2025-05-23T18:11:28.917+08:00 [DEBU] {9fd86ea745204218a7f3ff180d4dcbec} [  5 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`pic_url`,`link`,`sort`,`created_at`,`updated_at`) VALUES('111','11',1,'2025-05-23 18:11:28','2025-05-23 18:11:28') 
+2025-05-23T18:11:50.429+08:00 [DEBU] {891d2eaa4a204218a8f3ff1825fc6dd0} [  1 ms] [default] [shop] [rows:23 ] SHOW TABLES
+2025-05-23T18:11:50.430+08:00 [DEBU] {891d2eaa4a204218a8f3ff1825fc6dd0} [  1 ms] [default] [shop] [rows:2  ] UPDATE `rotation_info` SET `pic_url`='111',`link`='12',`sort`=0,`updated_at`='2025-05-23 18:11:50' WHERE (2) AND `deleted_at` IS NULL
+2025-05-23T18:13:51.861+08:00 [DEBU] {0a9be4ef66204218e5a3045db56ef25a} [  4 ms] [default] [shop] [rows:23 ] SHOW TABLES
+2025-05-23T18:13:51.862+08:00 [DEBU] {0a9be4ef66204218e5a3045db56ef25a} [  1 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2025-05-23T18:13:51.864+08:00 [DEBU] {0a9be4ef66204218e5a3045db56ef25a} [  2 ms] [default] [shop] [rows:2  ] UPDATE `rotation_info` SET `pic_url`='333',`updated_at`='2025-05-23 18:13:51' WHERE (2) AND `deleted_at` IS NULL
+2025-05-23T18:14:50.934+08:00 [DEBU] {8a2aa8b074204218e17dd83eb9290775} [  8 ms] [default] [shop] [rows:23 ] SHOW TABLES
+2025-05-23T18:14:50.936+08:00 [DEBU] {8a2aa8b074204218e17dd83eb9290775} [  2 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2025-05-23T18:14:50.938+08:00 [DEBU] {8a2aa8b074204218e17dd83eb9290775} [  2 ms] [default] [shop] [rows:1  ] UPDATE `rotation_info` SET `pic_url`='111',`updated_at`='2025-05-23 18:14:50' WHERE (`id`=2) AND `deleted_at` IS NULL
+2025-05-23T18:15:08.193+08:00 [DEBU] {0c5e8cb578204218e27dd83e98a5c6b9} [  6 ms] [default] [shop] [rows:1  ] UPDATE `rotation_info` SET `link`='11',`updated_at`='2025-05-23 18:15:08' WHERE (`id`=2) AND `deleted_at` IS NULL
+2025-05-23T18:15:30.563+08:00 [DEBU] {0db5d7ea7d204218e37dd83e9be359b5} [  7 ms] [default] [shop] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2025-05-23T18:15:30.564+08:00 [DEBU] {0db5d7ea7d204218e37dd83e9be359b5} [  1 ms] [default] [shop] [rows:2  ] SELECT `pic_url`,`link`,`sort` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 0,2
+2025-05-23T18:15:44.502+08:00 [DEBU] {f89ffd2981204218e47dd83eccd33af4} [  2 ms] [default] [shop] [rows:1  ] DELETE FROM `rotation_info` WHERE `id`=2
